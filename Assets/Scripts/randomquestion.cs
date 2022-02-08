@@ -19,6 +19,7 @@ public class randomquestion : MonoBehaviour
     public int finalValue2;
     public int finalValue3;
     public int finalValue4;
+    
 
     //private bool isAdd = false;
    // private bool isSub = false;
@@ -26,9 +27,24 @@ public class randomquestion : MonoBehaviour
    // private bool isDiv = false;
 
     float[] answers = new float[4];
+    string[] questions = new string[4];
+    GameObject[] answersBox;
+    
 
     // Start is called before the first frame update
     void Start()
+    {
+        Question();
+
+    }
+
+    void Update()
+    {
+
+
+
+    }
+    void Question()
     {
         firstValue = Random.Range(lowFirstValue, highFirstValue);
         SecondValue = Random.Range(lowSecondValue, highSecondValue);
@@ -36,7 +52,7 @@ public class randomquestion : MonoBehaviour
         Debug.Log("second value = " + SecondValue);
 
 
-        for (int e = 0; e < 5; e++)
+        for (int e = 1; e < 5; e++)
         {
 
             if (e == 1)
@@ -45,6 +61,7 @@ public class randomquestion : MonoBehaviour
                 //Debug.Log("Adding");
                 //isAdd = true;
                 answers[0] = finalValue1;
+                questions[0] = (firstValue + " + " + SecondValue);
                 Debug.Log("Value = add" + answers[0]);
 
 
@@ -52,9 +69,10 @@ public class randomquestion : MonoBehaviour
             if (e == 2)
             {
                 finalValue2 = firstValue - SecondValue;
-               // Debug.Log("Subtracting");
-               // isSub = true;
+                // Debug.Log("Subtracting");
+                // isSub = true;
                 answers[1] = finalValue2;
+                questions[1] = (firstValue + " - " + SecondValue);
                 Debug.Log("Value = sub " + answers[1]);
 
 
@@ -65,6 +83,7 @@ public class randomquestion : MonoBehaviour
                 //Debug.Log("Mutlipling");
                 //isMulti = true;            
                 answers[2] = finalValue3;
+                questions[2] = (firstValue + " x " + SecondValue);
                 Debug.Log("Value = multi" + answers[2]);
 
 
@@ -74,24 +93,45 @@ public class randomquestion : MonoBehaviour
             {
                 finalValue4 = firstValue / SecondValue;
                 //Debug.Log("Dividing");
-                //isDiv = true;
+                //isDiv = true
                 answers[3] = finalValue4;
+                questions[3] = (firstValue + " / " + SecondValue);
                 Debug.Log("Value = div" + answers[3]);
 
 
             }
 
         }
-    }
-
-    void Update()
-    {
-
-
+        EndAnswer();
 
     }
-    public void EndAnswer(string answerString)
+
+    void EndAnswer()
     {
-       
+        float aQnswer = answers[Random .Range(0, answers.Length)];
+        Debug.Log("the array is " + aQnswer);
+        
+        if (aQnswer == answers[0])
+        {
+            gameTxt.text = questions[0];
+        }       
+        if (aQnswer == answers[1])
+        {
+            gameTxt.text = questions[1];
+        }
+        if (aQnswer == answers[2])
+        {
+            gameTxt.text = questions[2];
+        }
+        if (aQnswer == answers[3])
+        {
+            gameTxt.text = questions[3];
+        }
+
+    }
+
+    void DisplayAnswers()
+    {
+
     }
 }

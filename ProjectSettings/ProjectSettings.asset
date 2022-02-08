@@ -673,10 +673,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 53796bc5-e0ef-40e0-bccd-8188529b1c54
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Mathtastic
+  organizationId: billy2k1
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
