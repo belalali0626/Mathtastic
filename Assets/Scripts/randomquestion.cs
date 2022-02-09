@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random=UnityEngine.Random;
+
 
 
 public class randomquestion : MonoBehaviour
@@ -28,13 +31,16 @@ public class randomquestion : MonoBehaviour
 
     float[] answers = new float[4];
     string[] questions = new string[4];
-    GameObject[] answersBox;
+    public GameObject[] answersBox;
+    private GameObject tempBox;
     
 
     // Start is called before the first frame update
     void Start()
     {
         Question();
+        shuffleAnswers();
+        
 
     }
 
@@ -130,8 +136,18 @@ public class randomquestion : MonoBehaviour
 
     }
 
+    void shuffleAnswers()
+    {
+        for(int i = 0; i < answersBox.Length; i++)
+        {
+            int rnd = Random.Range(0, answersBox.Length);
+            tempBox = answersBox[rnd];
+            answersBox[rnd] = answersBox[i];
+            answersBox[i] = tempBox;
+        }
+
+    }
     void DisplayAnswers()
     {
-
     }
 }

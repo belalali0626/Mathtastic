@@ -4,7 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-
+dir_to_ignore/Users/Imran/Documents/Mathtastic/Assets/GUI Kit Casual Game/
 # Visual Studio cache directory
 .vs/
 
@@ -35,3 +35,141 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/GUI Kit Casual Game.meta
+Assets/GUI Kit Casual Game/Extensions.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Documentation.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Fonts.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Fonts/LiberationSans.ttf
+Assets/GUI Kit Casual Game/PSD/PSD.zip.meta
+Assets/GUI Kit Casual Game/PSD/PSD.zip
+Assets/GUI Kit Casual Game/PSD.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Small_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Small_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Midium.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Midium.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Large.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_White_Large.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Small_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Small_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Small.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Small.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Midium_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Midium_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Midium.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Midium.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Large_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Large_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Large.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Red_Large.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Small_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Small_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Small.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Small.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Midium_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Midium_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Midium.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Midium.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Large_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Large_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Large.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Purple_Large.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Small_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Small_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Small.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Small.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Midium_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Midium_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Midium.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Midium.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Large_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Large_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Large.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Green_Large.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Small_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Small_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Small.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Small.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Midium_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Midium_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Midium.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Midium.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Large_Blended.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Large_Blended.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Large.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Star_Blue_Large.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Rotate.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_Rotate.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_LevelUp.prefab.meta
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle/Fx_LevelUp.prefab
+Assets/GUI Kit Casual Game/Prefabs/Fx_Paticle.meta
+Assets/GUI Kit Casual Game/Prefabs.meta
+Assets/GUI Kit Casual Game/GUI Kit Casual Game - Shortcut.lnk
+Assets/GUI Kit Casual Game/Extensions/UIParticle/UIParticleSystem.cs.meta
+Assets/GUI Kit Casual Game/Extensions/UIParticle/UIParticleSystem.cs
+Assets/GUI Kit Casual Game/Extensions/UIParticle/hidden particle.shader.meta
+Assets/GUI Kit Casual Game/Extensions/UIParticle/hidden particle.shader
+Assets/GUI Kit Casual Game/Extensions/UIParticle.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne.png.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne.png
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne.json.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne.json
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Sprites.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/TMP Settings.asset.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/TMP Settings.asset
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Style Sheets.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Sprite Assets.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMPro.cginc
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Shaders.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+Assets/GUI Kit Casual Game/Extensions/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
