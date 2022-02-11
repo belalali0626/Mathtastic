@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Random=UnityEngine.Random;
+using TMPro;
+using UnityEngine.UI;
 
+[SerializeField]
 
 
 public class randomquestion : MonoBehaviour
@@ -23,11 +25,15 @@ public class randomquestion : MonoBehaviour
     [Header("Components")]
     public Text gameTxt;
 
+    public String rightAnswer;
+
     [Header("Arrays")]
     float[] answers = new float[4];
     string[] questions = new string[4];
-    public Text[] answersBox;
-    private Text tempBox;
+    public TMP_Text[] answersBox;
+    private TMP_Text tempBox;
+
+    public String bow = "hello";
     
     void Start()
     {
@@ -98,7 +104,7 @@ public class randomquestion : MonoBehaviour
 
     }
 
-    void EndAnswer()
+    public void EndAnswer()
     {
         float aQnswer = answers[Random .Range(0, answers.Length)];
         Debug.Log("the array is " + aQnswer);
@@ -106,19 +112,33 @@ public class randomquestion : MonoBehaviour
         if (aQnswer == answers[0])
         {
             gameTxt.text = questions[0];
+            rightAnswer = answers[0].ToString();
+
+            Debug.Log("right answer = " + rightAnswer);
         }       
         if (aQnswer == answers[1])
         {
             gameTxt.text = questions[1];
+            rightAnswer = answers[1].ToString();
+            Debug.Log("right answer = " + rightAnswer);
+
         }
         if (aQnswer == answers[2])
         {
             gameTxt.text = questions[2];
+            rightAnswer = answers[2].ToString();
+            Debug.Log("right answer = " + rightAnswer);
+
         }
         if (aQnswer == answers[3])
         {
             gameTxt.text = questions[3];
+            rightAnswer = answers[2].ToString();
+            Debug.Log("right answer = " + rightAnswer);
+
+
         }
+
 
     }
 
@@ -136,7 +156,7 @@ public class randomquestion : MonoBehaviour
     void DisplayAnswers()
     {
         var count = -1;
-        foreach (Text text in answersBox)
+        foreach (TMP_Text text in answersBox)
         {
             ++count;
            text.text = answers[count].ToString();
@@ -144,4 +164,5 @@ public class randomquestion : MonoBehaviour
 
         }
     }
+
 }
