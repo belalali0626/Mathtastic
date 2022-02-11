@@ -9,45 +9,31 @@ using Random=UnityEngine.Random;
 
 public class randomquestion : MonoBehaviour
 {
-    //first value
+    [Header("Values")]
     private int lowFirstValue = 1;
     private int highFirstValue = 10;
     public int firstValue;
-    //second value
     private int lowSecondValue = 1;
     private int highSecondValue = 10;
     public int SecondValue;
-    public Text gameTxt;
     public int finalValue1;
     public int finalValue2;
     public int finalValue3;
     public int finalValue4;
-    
+    [Header("Components")]
+    public Text gameTxt;
 
-    //private bool isAdd = false;
-   // private bool isSub = false;
-   // private bool isMulti = false;
-   // private bool isDiv = false;
-
+    [Header("Arrays")]
     float[] answers = new float[4];
     string[] questions = new string[4];
-    public GameObject[] answersBox;
-    private GameObject tempBox;
+    public Text[] answersBox;
+    private Text tempBox;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         Question();
         shuffleAnswers();
-        
-
-    }
-
-    void Update()
-    {
-
-
+        DisplayAnswers();
 
     }
     void Question()
@@ -149,5 +135,13 @@ public class randomquestion : MonoBehaviour
     }
     void DisplayAnswers()
     {
+        var count = -1;
+        foreach (Text text in answersBox)
+        {
+            ++count;
+           text.text = answers[count].ToString();
+           text.name = answers[count].ToString();
+
+        }
     }
 }
