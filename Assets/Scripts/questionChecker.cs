@@ -18,6 +18,8 @@ public class questionChecker : MonoBehaviour
             if(gameObject.name == randomQ.rightAnswer)
             {
                 Debug.Log("RIGHT");
+
+                randomQ.Question();
             }
             else
             {

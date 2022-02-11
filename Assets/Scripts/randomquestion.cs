@@ -38,11 +38,10 @@ public class randomquestion : MonoBehaviour
     void Start()
     {
         Question();
-        shuffleAnswers();
-        DisplayAnswers();
+
 
     }
-    void Question()
+    public void Question()
     {
         firstValue = Random.Range(lowFirstValue, highFirstValue);
         SecondValue = Random.Range(lowSecondValue, highSecondValue);
@@ -101,6 +100,7 @@ public class randomquestion : MonoBehaviour
 
         }
         EndAnswer();
+        shuffleAnswers();
 
     }
 
@@ -138,7 +138,7 @@ public class randomquestion : MonoBehaviour
 
 
         }
-
+        DisplayAnswers();
 
     }
 
