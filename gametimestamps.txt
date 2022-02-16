@@ -1,0 +1,9 @@
+-668
+
+-1466
+
+-2191
+
+-2931
+
+nameToGame has to be redone
