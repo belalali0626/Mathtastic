@@ -8,6 +8,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 {
 
     [SerializeField] TMP_InputField roomNameInputField;
+    [SerializeField] TMP_Text errorText;
     void Start()
     {
         Debug.Log("Connected To Master");
@@ -39,15 +40,18 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomNameInputField.text);
 
         menuManager.Instance.OpenMenu("loading");
+
+        Debug.Log("HELLO111");
     }
 
     public override void OnJoinedRoom()
-    { 
-
+    {
+        menuManager.Instance.OpenMenu("room");
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        base.OnCreateRoomFailed(returnCode, message);
+        errorText.text = "Failed to create a room: " + message;
+        menuManager.Instance.OpenMenu("error");
     }
 }
