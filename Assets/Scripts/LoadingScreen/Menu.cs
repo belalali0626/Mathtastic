@@ -9,13 +9,13 @@ public class Menu : MonoBehaviour
 
     public void Open()
     {
-        open = false;
+        open = true;
         gameObject.SetActive(true);
     }
 
     public void Close()
     {
-        open = true;
+        open = false;
         gameObject.SetActive(false);
     }
 }
