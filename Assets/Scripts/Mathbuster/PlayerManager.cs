@@ -7,22 +7,41 @@ public class PlayerManager : MonoBehaviour
 {
     PhotonView PhoView;
 
+
     private void Awake()
     {
         PhoView = GetComponent<PhotonView>();
     }
-    void Start()
+
+    public void Start()
     {
-        if(PhoView.IsMine)
+        if (PhotonNetwork.IsMasterClient && PhoView.IsMine)
         {
             CreateController();
+
+            Debug.Log("test1");
         }
-        
+
+        else if (PhoView.IsMine)
+        {
+            CreateController2();
+
+            Debug.Log("test2");
+        }
     }
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), Vector3.zero, Quaternion.identity);
+        Transform spawnpoint = SpawnManager.Instance.spawnpoint1();
+
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), spawnpoint.position, spawnpoint.rotation);
+
+    }
+
+    void CreateController2()
+    {
+        Transform spawnpoint = SpawnManager.Instance.spawnpoint2();
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "second"), spawnpoint.position, spawnpoint.rotation);
 
     }
 }
