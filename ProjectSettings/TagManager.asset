@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - answersbox
+  - playerAB1
+  - playerAB2
+  - Player2
   layers:
   - Default
   - TransparentFX
