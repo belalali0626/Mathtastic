@@ -271,6 +271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 694813940}
   playerTag: Player
+  enemy: {fileID: 9058262909187939886, guid: a2fe4f4c9fbf12e40987e64aa3be7795, type: 3}
+  GiveDamage: 12
+  EnemyName: Player2
 --- !u!61 &14522803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2662,7 +2665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77749763
 GameObject:
@@ -2745,7 +2748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160657196
 GameObject:
@@ -2841,7 +2844,7 @@ RectTransform:
   - {fileID: 1465632086}
   - {fileID: 513811985}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5612,8 +5615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc15df20bc1c3ce469b4946e8382b70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 694813940}
+  GameManager: {fileID: 1363616169}
   playerTag: Player2
+  enemy: {fileID: 7331823289700312400, guid: a10a5c914ec38d44587b2199527a6ada, type: 3}
+  GiveDamage: 12
+  EnemyName: Player
 --- !u!61 &480724255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5873,7 +5879,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &513811985 stripped
 RectTransform:
@@ -6031,10 +6037,9 @@ GameObject:
   - component: {fileID: 694813942}
   - component: {fileID: 694813941}
   - component: {fileID: 694813943}
-  - component: {fileID: 694813944}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GM1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6092,32 +6097,6 @@ MonoBehaviour:
   - {fileID: 1060143714}
   - {fileID: 1068282152}
   - {fileID: 14522800}
---- !u!114 &694813944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694813940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cdcd9a83f546f4ab95751f1504d35d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Player 2
-  firstValue: 0
-  SecondValue: 0
-  finalValue1: 0
-  finalValue2: 0
-  finalValue3: 0
-  finalValue4: 0
-  gameTxt: {fileID: 28895197}
-  rightAnswer: 
-  answersBox:
-  - {fileID: 2011810328}
-  - {fileID: 1549933244}
-  - {fileID: 960972450}
-  - {fileID: 480724256}
 --- !u!1 &709507603
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,7 +6127,7 @@ Transform:
   - {fileID: 1166994796}
   - {fileID: 1437433935}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792971670
 GameObject:
@@ -8377,7 +8356,7 @@ Transform:
   - {fileID: 35651489}
   - {fileID: 219529290}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &944993698
 MonoBehaviour:
@@ -8445,8 +8424,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc15df20bc1c3ce469b4946e8382b70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 694813940}
+  GameManager: {fileID: 1363616169}
   playerTag: Player2
+  enemy: {fileID: 7331823289700312400, guid: a10a5c914ec38d44587b2199527a6ada, type: 3}
+  GiveDamage: 12
+  EnemyName: Player
 --- !u!61 &960972449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9943,7 +9925,7 @@ Transform:
   - {fileID: 792971671}
   - {fileID: 688764969}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051847813
 GameObject:
@@ -10177,6 +10159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 694813940}
   playerTag: Player
+  enemy: {fileID: 9058262909187939886, guid: a2fe4f4c9fbf12e40987e64aa3be7795, type: 3}
+  GiveDamage: 12
+  EnemyName: Player2
 --- !u!61 &1060143717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10353,6 +10338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 694813940}
   playerTag: Player
+  enemy: {fileID: 9058262909187939886, guid: a2fe4f4c9fbf12e40987e64aa3be7795, type: 3}
+  GiveDamage: 12
+  EnemyName: Player2
 --- !u!61 &1068282155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11361,7 +11349,7 @@ Transform:
   - {fileID: 1196893025}
   - {fileID: 807580393}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1343320283
 MonoBehaviour:
@@ -11375,6 +11363,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467d4ca1b48ee5a489e66f85d2bf4a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1: 0
+  Player2: 0
+--- !u!1 &1363616169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363616172}
+  - component: {fileID: 1363616171}
+  - component: {fileID: 1363616170}
+  m_Layer: 0
+  m_Name: GameManager Second
+  m_TagString: GM2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1363616170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95cdcd9a83f546f4ab95751f1504d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Player 2
+  firstValue: 0
+  SecondValue: 0
+  finalValue1: 0
+  finalValue2: 0
+  finalValue3: 0
+  finalValue4: 0
+  gameTxt: {fileID: 28895197}
+  rightAnswer: 
+  answersBox:
+  - {fileID: 2011810328}
+  - {fileID: 1549933244}
+  - {fileID: 960972450}
+  - {fileID: 480724256}
+--- !u!114 &1363616171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ea6b706a2e3dc48bfe36add9a92f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 160657196}
+--- !u!4 &1363616172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363616169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1437433933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11561,8 +11622,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc15df20bc1c3ce469b4946e8382b70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 694813940}
+  GameManager: {fileID: 1363616169}
   playerTag: Player2
+  enemy: {fileID: 7331823289700312400, guid: a10a5c914ec38d44587b2199527a6ada, type: 3}
+  GiveDamage: 12
+  EnemyName: Player
 --- !u!61 &1549933243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11986,7 +12050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1795627908
 GameObject:
@@ -12138,6 +12202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 694813940}
   playerTag: Player
+  enemy: {fileID: 9058262909187939886, guid: a2fe4f4c9fbf12e40987e64aa3be7795, type: 3}
+  GiveDamage: 12
+  EnemyName: Player2
 --- !u!61 &1795627913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22957,7 +23024,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23015,8 +23082,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc15df20bc1c3ce469b4946e8382b70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 694813940}
+  GameManager: {fileID: 1363616169}
   playerTag: Player2
+  enemy: {fileID: 7331823289700312400, guid: a10a5c914ec38d44587b2199527a6ada, type: 3}
+  GiveDamage: 12
+  EnemyName: Player
 --- !u!61 &2011810327
 BoxCollider2D:
   m_ObjectHideFlags: 0

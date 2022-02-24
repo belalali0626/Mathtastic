@@ -8,8 +8,10 @@ public class PlayerManager : MonoBehaviour
     PhotonView PhoView;
 
     //UI Elements
-    public GameObject MasterClientQUI;
+    GameObject MasterClientQUI;
     GameObject OtherClientQUI;
+    GameObject GM1;
+    GameObject GM2;
 
     private void Awake()
     {
@@ -18,6 +20,8 @@ public class PlayerManager : MonoBehaviour
         //Finding UI Elements & Setting False
         MasterClientQUI = GameObject.FindGameObjectWithTag("playerAB1");
         OtherClientQUI = GameObject.FindGameObjectWithTag("playerAB2");
+        GM1 = GameObject.FindGameObjectWithTag("GM1");
+        GM2 = GameObject.FindGameObjectWithTag("GM1");
 
     }
 
@@ -45,6 +49,7 @@ public class PlayerManager : MonoBehaviour
 
         //Setting UI True for MasterClient
         OtherClientQUI.SetActive(false);
+        GM2.SetActive(false);
 
     }
 
@@ -55,6 +60,9 @@ public class PlayerManager : MonoBehaviour
 
         //Setting UI True for OtherClient
         MasterClientQUI.SetActive(false);
+        GM1.SetActive(false);
+
 
     }
+
 }

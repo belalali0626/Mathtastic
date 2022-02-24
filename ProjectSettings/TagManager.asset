@@ -8,6 +8,8 @@ TagManager:
   - playerAB1
   - playerAB2
   - Player2
+  - GM1
+  - GM2
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class PlayerControllerMB : MonoBehaviour
+using TMPro;
+using UnityEngine.UI;
+
+public class PlayerControllerMB : MonoBehaviour, iDamageable
 {
     public Rigidbody2D rb;
 
@@ -14,20 +17,39 @@ public class PlayerControllerMB : MonoBehaviour
     // crosshair for shooting   
     public GameObject crosshair;
     public bool endOfAiming;
-
-
-    //Prefabs
-    public GameObject shuriken;
-
-
+    public TMP_Text PlayerNameText;
+    
+    [Header("Player Attributes")]
     // Storing movement, horizontal and vertical 
     public float moveSpeed = 5f;
     public float shu_base_speed = 1.0f;
     Vector2 movement;
+    const float maxHealth = 100f;
+    float CurrentHealth = maxHealth;
+    public Image fillImage;
+
+    public ProgressBarPro progress;
+
+    [Header("Prefabs")]
+
+    public GameObject shuriken;
+
+
 
     void Start()
     {
         view = GetComponent<PhotonView>();
+
+        if (view.IsMine)
+        {
+            PlayerNameText.text = PhotonNetwork.NickName;
+        }
+
+        else
+        {
+            PlayerNameText.text = view.Owner.NickName;
+            PlayerNameText.color = Color.red;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -46,12 +68,14 @@ public class PlayerControllerMB : MonoBehaviour
         Anim.SetFloat("Horizontal", movement.x);
         Anim.SetFloat("Vertical", movement.y);
         Anim.SetFloat("Speed", movement.sqrMagnitude);
-        
-        
-       
+
+
+
+
+
 
     }
-    
+
     private void FixedUpdate() 
     {
 
@@ -89,4 +113,33 @@ public class PlayerControllerMB : MonoBehaviour
         }
 
     }
+
+    public void TakeDamage(float damage)
+    {
+        view.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+    }
+
+    [PunRPC]
+    void RPC_TakeDamage(float damage)
+    {
+        if (view.IsMine)
+        {
+            CurrentHealth -= damage;
+            float health = CurrentHealth / maxHealth;
+            progress.SetValue(health);
+        }
+        else if (!view.IsMine)
+        {
+            CurrentHealth -= damage;
+            float health = CurrentHealth / maxHealth;
+            progress.SetValue(health); ;
+        }
+        if (CurrentHealth <= 0)
+        {
+            Debug.Log("Die");
+        }
+    }
+
+
+
 }

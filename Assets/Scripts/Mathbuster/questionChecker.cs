@@ -8,9 +8,18 @@ public class questionChecker : MonoBehaviour
     private randomquestion randomQ;
     public GameObject GameManager;
     public string playerTag;
+    public GameObject enemy;
+    public int GiveDamage = 12;
+    public string EnemyName;
+
     private void Awake()
     {
         randomQ = GameManager.GetComponent<randomquestion>();
+    }
+
+    void Update()
+    {
+        enemy = GameObject.FindGameObjectWithTag(EnemyName);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +28,8 @@ public class questionChecker : MonoBehaviour
             if(gameObject.name == randomQ.rightAnswer)
             {
                 Debug.Log("RIGHT");
+
+                enemy.GetComponent<iDamageable>()?.TakeDamage(GiveDamage);
 
                 randomQ.Question();
             }
