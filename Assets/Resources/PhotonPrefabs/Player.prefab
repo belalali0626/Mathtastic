@@ -111,6 +111,7 @@ MonoBehaviour:
   PlayerNameText: {fileID: 8271728635468125402}
   moveSpeed: 3.84
   shu_base_speed: 9
+  CurrentHealth: 100
   fillImage: {fileID: 0}
   progress: {fileID: 8312928476954494019}
   shuriken: {fileID: 2021137784593011575, guid: 92935dca482a81d49afb8a2b455ebbfc,

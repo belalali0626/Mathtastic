@@ -9,6 +9,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
 {
 	public static RoomManager Instance;
 
+	public string manager;
+	public int index;
+
 	void Awake()
 	{
 		if (Instance)
@@ -34,10 +37,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
 	void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
 	{
-		if (scene.buildIndex == 1) // We're in the game scene
+		if (scene.buildIndex == index) // We're in the game scene
 		{
 			Debug.Log("hi");
-			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
+			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", manager), Vector3.zero, Quaternion.identity);
 		}
 	}
 

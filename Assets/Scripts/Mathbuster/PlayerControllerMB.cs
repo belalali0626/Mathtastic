@@ -11,6 +11,7 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
 
     public Animator Anim;
 
+
     //Photon Stuff
     PhotonView view;
 
@@ -25,9 +26,9 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
     public float shu_base_speed = 1.0f;
     Vector2 movement;
     const float maxHealth = 100f;
-    float CurrentHealth = maxHealth;
+    public float CurrentHealth = maxHealth;
     public Image fillImage;
-
+    bool dead;
     public ProgressBarPro progress;
 
     [Header("Prefabs")]
@@ -50,6 +51,7 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
             PlayerNameText.text = view.Owner.NickName;
             PlayerNameText.color = Color.red;
         }
+
     }
     // Update is called once per frame
     void Update()
@@ -134,12 +136,12 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
             float health = CurrentHealth / maxHealth;
             progress.SetValue(health); ;
         }
-        if (CurrentHealth <= 0)
-        {
-            Debug.Log("Die");
-        }
-    }
+        //if (CurrentHealth <= 0)
+        //{
+          //  dead = true;
 
+        //}
+    }
 
 
 }

@@ -13,7 +13,6 @@ public class randomquestion : MonoBehaviour
 {
 
     [Header("Script Values")]
-    public String name;
     private int lowFirstValue = 1;
     private int highFirstValue = 10;
     public int firstValue;
