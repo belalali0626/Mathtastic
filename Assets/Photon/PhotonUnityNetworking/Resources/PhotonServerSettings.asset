@@ -49,6 +49,10 @@ MonoBehaviour:
   - Question
   - shuffleAnswers
   - giveScore
+  - recieveP1
+  - recieveP2
+  - LossCheck
+  - WinCheck
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

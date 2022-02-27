@@ -182,4 +182,18 @@ public class playerController : MonoBehaviour
 
         }
     }
+
+    [PunRPC]void WinCheck(bool wim)
+    {
+        if(wim == true)
+        {
+            Debug.Log("WIN");
+        }
+    }
+
+    [PunRPC]void LossCheck(bool loss)
+    {
+        Debug.Log("Loss");
+
+    }
 }

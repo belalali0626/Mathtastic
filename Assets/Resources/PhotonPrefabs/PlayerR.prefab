@@ -556,9 +556,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_Score: 0
-  PlayerScore: pScore1
+  PlayerScoreTag: pScore1
+  MethodName: recieveP1
   p_Text: {fileID: 0}
   text: {fileID: 0}
+  ScoreManager: {fileID: 0}
 --- !u!114 &2682182826638916512
 MonoBehaviour:
   m_ObjectHideFlags: 0

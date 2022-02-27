@@ -9,7 +9,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1517801723760526671, guid: 67988fdb5f4e3734aa139fb572c247eb,
         type: 3}
+      propertyPath: MethodName
+      value: recieveP2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517801723760526671, guid: 67988fdb5f4e3734aa139fb572c247eb,
+        type: 3}
+      propertyPath: PlayerType
+      value: recieveP2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517801723760526671, guid: 67988fdb5f4e3734aa139fb572c247eb,
+        type: 3}
       propertyPath: PlayerScore
+      value: pScore2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517801723760526671, guid: 67988fdb5f4e3734aa139fb572c247eb,
+        type: 3}
+      propertyPath: PlayerScoreTag
       value: pScore2
       objectReference: {fileID: 0}
     - target: {fileID: 2682182826638916515, guid: 67988fdb5f4e3734aa139fb572c247eb,

@@ -15,6 +15,7 @@ TagManager:
   - GH2
   - pScore1
   - pScore2
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
