@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mathmania.unity
     guid: 02d885a1a31d1a940bd222547e220c17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mathsbuster.unity
     guid: 22b2fe2e43d3d6341a5f743b35c8be60
   - enabled: 1

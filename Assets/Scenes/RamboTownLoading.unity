@@ -3030,7 +3030,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 999
+  sceneViewId: 555
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1256814562
@@ -3046,7 +3046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: PlayerManagerR
-  index: 3
+  index: 1
 --- !u!4 &1256814563
 Transform:
   m_ObjectHideFlags: 0
@@ -3151,7 +3151,7 @@ MonoBehaviour:
   playerListItemPrefab: {fileID: 9131337051493239493, guid: 1078d9abbb7cc57419dafd4d7a5658c7,
     type: 3}
   startGameButton: {fileID: 453949480}
-  index: 3
+  index: 1
 --- !u!114 &1338213817
 MonoBehaviour:
   m_ObjectHideFlags: 0

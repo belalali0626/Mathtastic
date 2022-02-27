@@ -1,6 +1,8 @@
 ﻿using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class playerController : MonoBehaviour
@@ -19,6 +21,8 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     public LayerMask groundLayer;
+    PhotonView view;
+
 
     [Header("Physics")]
     public float maxSpeed;
@@ -31,12 +35,32 @@ public class playerController : MonoBehaviour
     public float groundLength = 0.6f;
     public float fallMultiplier = 5f;
 
+    [Header("UI")]
+    public TMP_Text PlayerNameText;
+    public SpriteRenderer SR;
+    public Color enemyColour;
+
     [Header("Prefabs")]
     public GameObject Bullet;
     public Transform shootPos;
 
 
+    void Start()
+    {
+        view = GetComponent<PhotonView>();
 
+        if (view.IsMine)
+        {
+            PlayerNameText.text = PhotonNetwork.NickName;
+        }
+
+        else
+        {
+            PlayerNameText.text = view.Owner.NickName;
+            PlayerNameText.color = Color.red;
+            SR.color = enemyColour;
+        }
+    }
 
     void FixedUpdate()
     {
@@ -51,8 +75,10 @@ public class playerController : MonoBehaviour
     }
     void Update()
     {
+        if (!view.IsMine)
+            return;
 
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             jumpTimer = Time.time + jumpDelay;
         }
@@ -142,15 +168,18 @@ public class playerController : MonoBehaviour
     
     private void Shoot()
     {
-        if(faceRight == false)
-        {
-            GameObject obj = PhotonNetwork.Instantiate(Bullet.name, new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
-
-        }
         if(faceRight == true)
         {
-            GameObject obj = PhotonNetwork.Instantiate(Bullet.name, new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
+            GameObject obj = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
+            anim.SetTrigger("Shoot");
+
+        }
+        if(faceRight == false)
+        {
+            GameObject obj = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
             obj.GetComponent<PhotonView>().RPC("ChangeDir_Left", RpcTarget.All);
+            anim.SetTrigger("Shoot");
+
         }
     }
 }

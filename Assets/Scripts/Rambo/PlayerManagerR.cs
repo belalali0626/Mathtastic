@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class PlayerManagerR : MonoBehaviour
 {
+    [Header("Components")]
     PhotonView PhoView;
-
-    public GameObject player;
+    
+    [Header("Game Objects")]
+    GameObject GM1;
+    GameObject GM2;
 
 
     private void Awake()
     {
         PhoView = GetComponent<PhotonView>();
-
+        GM1 = GameObject.FindGameObjectWithTag("GM1");
+        GM2 = GameObject.FindGameObjectWithTag("GM2");
 
     }
 
@@ -40,14 +44,17 @@ public class PlayerManagerR : MonoBehaviour
 
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerR"), spawnpoint.position, spawnpoint.rotation);
 
+        Destroy(GM2);
+
 
     }
 
     void CreateController2()
     {
-        Transform spawnpoint = SpawnManager.Instance.spawnpoint2();
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "secondR"), spawnpoint.position, spawnpoint.rotation);
+        Transform spawnpoint2 = SpawnManager.Instance.spawnpoint2();
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerR2"), spawnpoint2.position, spawnpoint2.rotation);
 
+        Destroy(GM1);
 
     }
 }

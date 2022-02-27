@@ -9,6 +9,8 @@ public class BulletController : MonoBehaviourPun
     public float Speed;
     public float DestroyTimer;
     public bool Direction;
+    public float damage = 100;
+
 
     private void Awake()
     {
@@ -55,6 +57,10 @@ public class BulletController : MonoBehaviourPun
 
         if (target != null && (!target.IsMine || target.IsRoomView))
         {
+            if(target.tag == "playerAB1" | target.tag == "playerAB2")
+            {
+                target.RPC("ReduceHealth", RpcTarget.All, damage);
+            }
             this.GetComponent<PhotonView>().RPC("DestroyObject", RpcTarget.All);
         }
     }

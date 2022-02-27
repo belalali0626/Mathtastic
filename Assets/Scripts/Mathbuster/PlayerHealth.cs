@@ -7,18 +7,33 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviourPun
 {
     public Image fillImage;
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
     void Start()
     {
         currentHealth = maxHealth;
     }
-    [PunRPC] void ReduceHealth(int amount)
+
+
+    [PunRPC] void ReduceHealth(float damage)
     {
-        currentHealth -= amount;
+        currentHealth -= damage;
+        Healthbar();
         if(currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Debug.Log("die");
+        }
+    }
+
+    private void Healthbar()
+    {
+        if(photonView.IsMine)
+        {
+            fillImage.fillAmount = currentHealth / maxHealth;
+        }
+        else
+        {
+            fillImage.fillAmount = currentHealth / maxHealth;
         }
     }
 

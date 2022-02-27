@@ -44,6 +44,11 @@ MonoBehaviour:
   - ChangeDir_left
   - DestroyObject
   - ChangeDir_Left
+  - DisplayAnswers
+  - EndAnswer
+  - Question
+  - shuffleAnswers
+  - giveScore
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

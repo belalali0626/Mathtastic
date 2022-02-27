@@ -397,13 +397,16 @@ GameObject:
   - component: {fileID: 2682182826638916517}
   - component: {fileID: 2682182826638916526}
   - component: {fileID: 2682182826638916513}
+  - component: {fileID: 1517801723760526671}
   - component: {fileID: 2682182826638916512}
   - component: {fileID: 2682182826638916525}
   - component: {fileID: 2682182826638916524}
-  - component: {fileID: 2682182826638916527}
+  - component: {fileID: 6495061227985451108}
+  - component: {fileID: -3703048175601482122}
+  - component: {fileID: -7477139480734259307}
   m_Layer: 0
   m_Name: PlayerR
-  m_TagString: Player
+  m_TagString: playerAB1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,6 +543,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07940495, y: 0.15671223}
   m_EdgeRadius: 0
+--- !u!114 &1517801723760526671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682182826638916516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f25ea012155434caac8f431744976c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_Score: 0
+  PlayerScore: pScore1
+  p_Text: {fileID: 0}
+  text: {fileID: 0}
 --- !u!114 &2682182826638916512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +587,9 @@ MonoBehaviour:
   colliderOffset: {x: -0.04, y: 0, z: 0}
   groundLength: 0.185
   fallMultiplier: 7
+  PlayerNameText: {fileID: 2682182826176371261}
+  SR: {fileID: 2682182826638916514}
+  enemyColour: {r: 1, g: 0, b: 0, a: 0.46666667}
   Bullet: {fileID: 7457491003218455028, guid: 152d61da31b7f444db4028ac23ce5d97, type: 3}
   shootPos: {fileID: 2682182826908096757}
 --- !u!114 &2682182826638916525
@@ -595,17 +617,17 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Jump
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Shoot
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: isMoving
   m_SynchronizeLayers:
-  - SynchronizeType: 1
+  - SynchronizeType: 0
     LayerIndex: 0
-  - SynchronizeType: 1
+  - SynchronizeType: 0
     LayerIndex: 1
-  - SynchronizeType: 1
+  - SynchronizeType: 0
     LayerIndex: 2
 --- !u!114 &2682182826638916524
 MonoBehaviour:
@@ -627,11 +649,43 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2682182826638916525}
-  - {fileID: 2682182826638916527}
+  - {fileID: 6495061227985451108}
+  - {fileID: -7477139480734259307}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2682182826638916527
+--- !u!114 &6495061227985451108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682182826638916516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &-3703048175601482122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682182826638916516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecf014bef5f5c44e8dd43553b9dd00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 2682182825160291391}
+  maxHealth: 100
+  currentHealth: 0
+--- !u!114 &-7477139480734259307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -655,7 +709,7 @@ MonoBehaviour:
     ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
   m_RotationModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     InterpolateOption: 1
     InterpolateRotateTowardsSpeed: 180
     InterpolateLerpSpeed: 5
@@ -663,7 +717,7 @@ MonoBehaviour:
     SynchronizeEnabled: 1
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
+    InterpolateLerpSpeed: 1
 --- !u!1 &2682182826908096756
 GameObject:
   m_ObjectHideFlags: 0

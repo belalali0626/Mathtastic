@@ -13,6 +13,8 @@ TagManager:
   - endGame
   - GH1
   - GH2
+  - pScore1
+  - pScore2
   layers:
   - Default
   - TransparentFX
