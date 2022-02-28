@@ -1,5 +1,4 @@
 ﻿using Photon.Pun;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,49 +6,65 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [Header("Player")]
-    public GameObject player1;
-    public  GameObject player2;
-
-    [Header("Text Components")]
-    public int p1_score;
-    public int p2_score;
+    PhotonView view;
 
     [Header("Winner Conditions")]
-    bool Win = true;
-    bool Loss = true;
-    [PunRPC]void recieveP1(int Score)
+    public string enemyTag;
+    public int p1_Score;
+    public int p2_Score;
+
+
+
+    private void Update()
     {
-        p1_score += Score/2;
-    }
-    [PunRPC] void recieveP2(int score)
-    {
-        p2_score += score/2;
 
-    }
+        WinCheck();
 
-    void Update()
-    {
-/*        player1 = GameObject.FindGameObjectWithTag("playerAB1");
-        player2 = GameObject.FindGameObjectWithTag("playerAB2");
-        PhotonView target1 = player1.GetComponent<PhotonView>();
-        PhotonView target2 = player2.GetComponent<PhotonView>();
+        view = GetComponent<PhotonView>();
 
+        if (p1_Score == 1)
+        {
+            if (view.IsMine)
+            {
+                Win();
+            }
 
-
-      if (p1_score > 5)
-      {
-            target1.RPC("WinCheck", RpcTarget.All, Win);
-            target2.RPC("LossCheck", RpcTarget.All, Loss);
-
-      }
-
-      else if (p2_score > 5)
-      {
-            target2.RPC("WinCheck", RpcTarget.All, Win);
-            target1.RPC("LossCheck", RpcTarget.All, Loss);
-        }*/
+            if(!view.IsMine)
+            {
+                Loss();
+            }
+            
+        }
 
     }
+
+    void WinCheck()
+
+    {
+        GameObject Player = this.gameObject;
+        Score PlayerScore = Player.GetComponent<Score>();
+
+        p1_Score = PlayerScore.p_Score;
+
+
+        GameObject EnemyPlayer = GameObject.FindGameObjectWithTag(enemyTag);
+        Score EnemyScore = EnemyPlayer.GetComponent<Score>();
+
+        p2_Score = EnemyScore.p_Score;
+
+
+    }
+
+    void Win()
+    {
+        GameManager.instance.Winner = true;
+    }
+    void Loss()
+    {
+        GameManager.instance.Loser = true;
+    }
+
+
+
 
 }

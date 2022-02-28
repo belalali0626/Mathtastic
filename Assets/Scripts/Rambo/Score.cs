@@ -11,9 +11,6 @@ public class Score : MonoBehaviour
     public int p_Score = 0;
     public string PlayerScoreTag;
 
-    [Header("What Player Is It?")]
-    public string MethodName;
-
 
     [Header("Text Components")]
     public TMP_Text p_Text;
@@ -34,7 +31,6 @@ public class Score : MonoBehaviour
         updateScore();
 
         PhotonView target = ScoreManager.GetComponent<PhotonView>();
-        target.RPC(MethodName, RpcTarget.All, score);
 
 
     }

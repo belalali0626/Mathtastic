@@ -41,12 +41,13 @@ public class AnswerCheck : MonoBehaviour
         {
             if (gameObject.name == qLogic.rightAnswer)
             {
+                qLogic.Question();
+
 
                 target.RPC("giveScore", RpcTarget.All, score);
 
                 Debug.Log("Right");
 
-                qLogic.Question();
             }
             else
             {

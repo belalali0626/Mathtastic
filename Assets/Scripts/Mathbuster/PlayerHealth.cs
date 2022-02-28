@@ -9,9 +9,15 @@ public class PlayerHealth : MonoBehaviourPun
     public Image fillImage;
     public float maxHealth = 100;
     public float currentHealth;
+    public Animator anim;
+    public playerController playerControl;
+
     void Start()
     {
         currentHealth = maxHealth;
+        anim = gameObject.GetComponent<Animator>();
+        playerControl = gameObject.GetComponent<playerController>();
+
     }
 
 
@@ -21,7 +27,10 @@ public class PlayerHealth : MonoBehaviourPun
         Healthbar();
         if(currentHealth <= 0)
         {
-            Debug.Log("die");
+                anim.SetBool("Stun", true);
+                playerControl.enabled = false;
+                StartCoroutine(WaitForStunToEnd());
+            
         }
     }
 
@@ -35,6 +44,16 @@ public class PlayerHealth : MonoBehaviourPun
         {
             fillImage.fillAmount = currentHealth / maxHealth;
         }
+    }
+
+    IEnumerator WaitForStunToEnd()
+    {
+        yield return null;
+        yield return new WaitForSeconds(5f);
+        anim.SetBool("Stun", false);
+        playerControl.enabled = true;
+        currentHealth = 100;
+        Healthbar();
     }
 
 
