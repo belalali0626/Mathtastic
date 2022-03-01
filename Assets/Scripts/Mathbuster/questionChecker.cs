@@ -9,7 +9,7 @@ public class questionChecker : MonoBehaviour
     public GameObject GameManager;
     public string playerTag;
     public GameObject enemy;
-    public int GiveDamage = 12;
+    public int GiveDamage = 40;
     public string EnemyName;
 
     private void Awake()

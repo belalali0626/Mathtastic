@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System.IO;
 using TMPro;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
 
     //Photon Stuff
     PhotonView view;
+    PlayerControllerMB playerControl;
 
     // crosshair for shooting   
     public GameObject crosshair;
@@ -21,14 +23,12 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
     public TMP_Text PlayerNameText;
     
     [Header("Player Attributes")]
-    // Storing movement, horizontal and vertical 
     public float moveSpeed = 5f;
     public float shu_base_speed = 1.0f;
     Vector2 movement;
     const float maxHealth = 100f;
     public float CurrentHealth = maxHealth;
     public Image fillImage;
-    bool dead;
     public ProgressBarPro progress;
 
     [Header("Prefabs")]
@@ -40,6 +40,7 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
     void Start()
     {
         view = GetComponent<PhotonView>();
+        playerControl = this.GetComponent<PlayerControllerMB>();
 
         if (view.IsMine)
         {
@@ -53,7 +54,6 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
         }
 
     }
-    // Update is called once per frame
     void Update()
     {
         if (!view.IsMine)
@@ -94,6 +94,7 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
 
     void Aim()
     {
+        Cursor.visible = false;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         crosshair.transform.localPosition = mousePos;
 
@@ -108,10 +109,9 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
         if (endOfAiming)
         {
             Debug.Log("Hii");
-            GameObject shu = Instantiate(shuriken, transform.position, Quaternion.identity);
+            GameObject shu = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","shuriken"), transform.position, Quaternion.identity);
             shu.GetComponent<Rigidbody2D>().velocity = ShootingDirection * shu_base_speed;
             shu.transform.Rotate(0, 0, Mathf.Atan2(ShootingDirection.y, ShootingDirection.x) * Mathf.Rad2Deg);
-            //Destroy(shu, 2.0f);
         }
 
     }
@@ -136,12 +136,20 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
             float health = CurrentHealth / maxHealth;
             progress.SetValue(health); ;
         }
-        //if (CurrentHealth <= 0)
-        //{
-          //  dead = true;
-
-        //}
     }
 
+    [PunRPC] void Stun()
+    {
+        Anim.SetBool("Stun", true);
+        playerControl.enabled = false;
+        StartCoroutine(WaitForStunToEnd());
+    }
+    IEnumerator WaitForStunToEnd()
+    {
+        yield return null;
+        yield return new WaitForSeconds(5f);
+        Anim.SetBool("Stun", false);
+        playerControl.enabled = true;
+    }
 
 }
