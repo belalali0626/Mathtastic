@@ -18,18 +18,18 @@ public class randomquestion : MonoBehaviour
     public int firstValue;
     private int lowSecondValue = 1;
     private int highSecondValue = 10;
-    public int SecondValue;
-    public int finalValue1;
-    public int finalValue2;
-    public int finalValue3;
-    public int finalValue4;
+    public decimal SecondValue;
+    public decimal finalValue1;
+    public decimal finalValue2;
+    public decimal finalValue3;
+    public decimal finalValue4;
     [Header("Components")]
     public Text gameTxt;
 
     public String rightAnswer;
 
     [Header("Arrays")]
-    float[] answers = new float[4];
+    decimal[] answers = new decimal[4];
     string[] questions = new string[4];
     public TMP_Text[] answersBox;
     private TMP_Text tempBox;
@@ -69,7 +69,7 @@ public class randomquestion : MonoBehaviour
             }
             if (e == 4)
             {
-                finalValue4 = firstValue / SecondValue;
+                finalValue4 = Math.Round(firstValue / SecondValue, 2);
                 answers[3] = finalValue4;
                 questions[3] = (firstValue + " / " + SecondValue);
             }
@@ -82,7 +82,7 @@ public class randomquestion : MonoBehaviour
 
     public void EndAnswer()
     {
-        float aQnswer = answers[Random .Range(0, answers.Length)];
+        decimal aQnswer = answers[Random .Range(0, answers.Length)];
         Debug.Log("the array is " + aQnswer);
         
         if (aQnswer == answers[0])
@@ -109,7 +109,7 @@ public class randomquestion : MonoBehaviour
         if (aQnswer == answers[3])
         {
             gameTxt.text = questions[3];
-            rightAnswer = answers[2].ToString();
+            rightAnswer = answers[3].ToString();
             Debug.Log("right answer = " + rightAnswer);
 
 

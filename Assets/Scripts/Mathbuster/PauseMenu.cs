@@ -17,6 +17,7 @@ public class PauseMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             pauseMenu.SetActive(true);
+            Cursor.visible = true;
         }
         
     }
@@ -30,5 +31,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        Cursor.visible = false;
+
     }
 }
