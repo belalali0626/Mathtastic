@@ -44,4 +44,13 @@ public class menuManager : MonoBehaviour
 	{
 		menu.Close();
 	}
+
+	public void ButtonClick()
+	{
+		FindObjectOfType<AudioManager>().Play("click1");
+	}
+	public void StartClick()
+	{
+		FindObjectOfType<AudioManager>().Play("start");
+	}
 }

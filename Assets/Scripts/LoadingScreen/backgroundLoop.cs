@@ -21,6 +21,8 @@ public class backgroundLoop : MonoBehaviour
         {
             loadChildObjects(obj);
         }
+
+        FindObjectOfType<AudioManager>().Play("MainSong");
     }
 
     void loadChildObjects(GameObject obj)

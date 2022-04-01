@@ -45,9 +45,11 @@ public class playerController : MonoBehaviour
     public Transform shootPos;
 
 
+
     void Start()
     {
         view = GetComponent<PhotonView>();
+
 
         if (view.IsMine)
         {
@@ -115,6 +117,8 @@ public class playerController : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+        FindObjectOfType<AudioManager>().Play("jump");
+
     }
 
     void physicsHandler()
@@ -172,13 +176,17 @@ public class playerController : MonoBehaviour
         {
             GameObject obj = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
             anim.SetTrigger("Shoot");
+            FindObjectOfType<AudioManager>().Play("shoot");
+
 
         }
-        if(faceRight == false)
+        if (faceRight == false)
         {
             GameObject obj = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), new Vector2(shootPos.transform.position.x, shootPos.transform.position.y), Quaternion.identity, 0);
             obj.GetComponent<PhotonView>().RPC("ChangeDir_Left", RpcTarget.All);
             anim.SetTrigger("Shoot");
+            FindObjectOfType<AudioManager>().Play("shoot");
+
 
         }
     }
@@ -196,4 +204,5 @@ public class playerController : MonoBehaviour
         Debug.Log("Loss");
 
     }
+
 }

@@ -33,6 +33,9 @@ public class GameManagerM : MonoBehaviour
     void Awake()
     {
         _instance = this;
+        FindObjectOfType<AudioManager>().StopPlaying("MainSong");
+        FindObjectOfType<AudioManager>().Play("mathmania");
+
     }
 
     void Update()
@@ -50,20 +53,20 @@ public class GameManagerM : MonoBehaviour
 
     void Win()
     {
-        PhotonView view = PhotonView.Get(this);
-        view.RPC("Timescale", RpcTarget.All);
+        Cursor.visible = true;
         GameStateCanvas.SetActive(true);
         GameState.text = "You Won!";
         GameState.color = Color.green;
+
     }
 
     void Lose()
     {
-        PhotonView view = PhotonView.Get(this);
-        view.RPC("Timescale", RpcTarget.All);
         GameStateCanvas.SetActive(true);
         GameState.text = "You Lost!";
         GameState.color = Color.red;
+        Cursor.visible = true;
+
 
     }
 

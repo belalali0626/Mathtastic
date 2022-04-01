@@ -50,6 +50,7 @@ public class ServerHandler : MonoBehaviourPunCallbacks
             yield return null;
         Destroy(GameObject.Find("DontDestroyOnLoad"));
         Destroy(GameObject.Find("RoomManager"));
+        PhotonNetwork.LoadLevel(index);
 
 
     }

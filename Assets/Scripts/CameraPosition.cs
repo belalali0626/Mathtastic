@@ -7,6 +7,12 @@ public class CameraPosition : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        FindObjectOfType<AudioManager>().StopPlaying("mathmania");
+        FindObjectOfType<AudioManager>().StopPlaying("rambotown");
+
+        Cursor.visible = true;
+
+
     }
 
     void OnGUI()

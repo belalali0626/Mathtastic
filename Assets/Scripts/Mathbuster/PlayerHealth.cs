@@ -25,12 +25,16 @@ public class PlayerHealth : MonoBehaviourPun
     {
         currentHealth -= damage;
         Healthbar();
-        if(currentHealth <= 0)
+        FindObjectOfType<AudioManager>().Play("hit");
+
+        if (currentHealth <= 0)
         {
                 anim.SetBool("Stun", true);
                 playerControl.enabled = false;
                 StartCoroutine(WaitForStunToEnd());
-            
+                FindObjectOfType<AudioManager>().Play("stun");
+
+
         }
     }
 

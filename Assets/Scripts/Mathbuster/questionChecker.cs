@@ -32,9 +32,12 @@ public class questionChecker : MonoBehaviour
                 enemy.GetComponent<iDamageable>()?.TakeDamage(GiveDamage);
 
                 randomQ.Question();
+                FindObjectOfType<AudioManager>().Play("score");
+
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("wrong");
                 Debug.Log("Wrong");
             }
         }

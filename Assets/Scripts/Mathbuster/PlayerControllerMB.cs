@@ -41,6 +41,8 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
     {
         view = GetComponent<PhotonView>();
         playerControl = this.GetComponent<PlayerControllerMB>();
+        Cursor.visible = false;
+
 
         if (view.IsMine)
         {
@@ -94,7 +96,6 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
 
     void Aim()
     {
-        Cursor.visible = false;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         crosshair.transform.localPosition = mousePos;
 
@@ -112,6 +113,8 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
             GameObject shu = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","shuriken"), transform.position, Quaternion.identity);
             shu.GetComponent<Rigidbody2D>().velocity = ShootingDirection * shu_base_speed;
             shu.transform.Rotate(0, 0, Mathf.Atan2(ShootingDirection.y, ShootingDirection.x) * Mathf.Rad2Deg);
+            FindObjectOfType<AudioManager>().Play("shuriken");
+
         }
 
     }
@@ -140,9 +143,13 @@ public class PlayerControllerMB : MonoBehaviour, iDamageable
 
     [PunRPC] void Stun()
     {
+        FindObjectOfType<AudioManager>().Play("hit");
         Anim.SetBool("Stun", true);
         playerControl.enabled = false;
         StartCoroutine(WaitForStunToEnd());
+        FindObjectOfType<AudioManager>().Play("stun");
+
+
     }
     IEnumerator WaitForStunToEnd()
     {

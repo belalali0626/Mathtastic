@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
 
         view = GetComponent<PhotonView>();
 
-        if (p1_Score == 1)
+        if (p1_Score == 5)
         {
             if (view.IsMine)
             {
@@ -58,10 +58,14 @@ public class ScoreManager : MonoBehaviour
     void Win()
     {
         GameManager.instance.Winner = true;
+        FindObjectOfType<AudioManager>().Play("win");
+
     }
     void Loss()
     {
         GameManager.instance.Loser = true;
+        FindObjectOfType<AudioManager>().Play("loss");
+
     }
 
 

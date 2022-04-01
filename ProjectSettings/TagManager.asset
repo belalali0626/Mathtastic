@@ -16,6 +16,8 @@ TagManager:
   - pScore1
   - pScore2
   - ScoreManager
+  - spawn1
+  - spawn2
   layers:
   - Default
   - TransparentFX

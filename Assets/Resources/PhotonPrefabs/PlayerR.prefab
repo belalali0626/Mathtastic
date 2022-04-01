@@ -558,6 +558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_Score: 0
   PlayerScoreTag: pScore1
+  spawn1: {fileID: 0}
+  spawn2: {fileID: 0}
   p_Text: {fileID: 0}
   text: {fileID: 0}
   ScoreManager: {fileID: 0}

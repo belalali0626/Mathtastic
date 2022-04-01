@@ -11,6 +11,9 @@ public class Score : MonoBehaviour
     public int p_Score = 0;
     public string PlayerScoreTag;
 
+    [Header("Text Components")]
+    public GameObject spawn1;
+    public GameObject spawn2;
 
     [Header("Text Components")]
     public TMP_Text p_Text;
@@ -23,16 +26,35 @@ public class Score : MonoBehaviour
 
         text = GameObject.FindGameObjectWithTag(PlayerScoreTag);
         p_Text = text.GetComponent<TMP_Text>();
+
+        spawn1 = GameObject.FindGameObjectWithTag("spawn1");
+        spawn2 = GameObject.FindGameObjectWithTag("spawn2");
+
+        GameObject player1 = GameObject.FindGameObjectWithTag("playerAB1");
+        GameObject player2 = GameObject.FindGameObjectWithTag("playerAB2");
+
     }
 
     [PunRPC]void giveScore(int score)
     {
         p_Score += score;
         updateScore();
+        FindObjectOfType<AudioManager>().Play("score");
+        RespawnFromScore();
 
-        PhotonView target = ScoreManager.GetComponent<PhotonView>();
+    }
 
+    void RespawnFromScore()
+    {
+        if (gameObject.tag == "playerAB1")
+        {
+            gameObject.transform.position = spawn1.transform.position;
+        }
+        if (gameObject.tag == "playerAB2")
+        {
+            gameObject.transform.position = spawn2.transform.position;
 
+        }
     }
 
     void updateScore()
